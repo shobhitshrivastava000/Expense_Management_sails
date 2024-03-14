@@ -5,13 +5,15 @@
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
 
+//Expense Model
+
 module.exports = {
 
   attributes: {
 
     userId:{
       model:'User',
-      required:true
+      required:true ,
     },
 
     account:{

@@ -8,6 +8,8 @@
 const { HTTP_STATUS } = require('../../config/constants');
 
 module.exports = {
+
+  //Add expense into the particular account
   addExpense: async (req, res) => {
     try {
       const { userId, accountId, amount, description, category } = req.body;
@@ -51,6 +53,7 @@ module.exports = {
     }
   },
 
+  //Get all the expenses of the particular account
   getAllExpense: async (req, res) => {
     try {
       const accountId = req.params.accountId;
@@ -78,6 +81,7 @@ module.exports = {
     }
   },
 
+  //update the expense details, e.g.: amount, dictionary, category
   updateExpense: async (req, res) => {
     try {
       const transactionId = req.params.transactionId;
@@ -105,6 +109,7 @@ module.exports = {
     }
   },
 
+  //delete the expense
   deleteExpense: async (req, res) => {
     try {
       const transactionId = req.params.transactionId;

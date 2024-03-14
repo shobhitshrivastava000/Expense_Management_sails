@@ -9,6 +9,7 @@ const { HTTP_STATUS } = require('../../config/constants');
 
 module.exports = {
 
+  //Create Account of the User
   createNewAccount: async (req, res) => {
     try {
       const { userId, name } = req.body;
@@ -45,6 +46,7 @@ module.exports = {
     }
   },
 
+  //Get all the accounts list, made by User
   getAllAccounts: async (req, res) => {
     try {
       const userId = req.params.id;
@@ -69,6 +71,7 @@ module.exports = {
     }
   },
 
+  //Update the account details,e.g. Name of account
   updateAccount: async (req, res) => {
     try {
       const accountId = req.params.accountid;
@@ -95,6 +98,7 @@ module.exports = {
     }
   },
 
+  //Delete the account made by user
   deleteAccount: async (req, res) => {
     try {
       const accountId = req.params.accountid;

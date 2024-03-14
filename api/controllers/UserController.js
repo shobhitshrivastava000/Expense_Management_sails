@@ -7,6 +7,7 @@
 const { bcrypt, jwt, HTTP_STATUS } = require('../../config/constants');
 
 module.exports = {
+  //Register the user
   register: async (req, res) => {
     try {
       const { username, email, password } = req.body;
@@ -46,6 +47,7 @@ module.exports = {
     }
   },
 
+  //Login the user
   login: async (req, res) => {
     try {
       const { email, password } = req.body;

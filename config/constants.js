@@ -1,3 +1,4 @@
+//status code
 module.exports = {
   HTTP_STATUS:{
     SUCCESS: 200,
